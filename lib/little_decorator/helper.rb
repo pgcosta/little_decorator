@@ -25,7 +25,7 @@ class LittleDecorator
     alias_method :d, :decorate
 
     def class_exists?(klass)
-      Object.const_get(:"#{decorator_klass}").is_a?(Class) rescue false
+      Object.const_get(:"#{klass}").is_a?(Class) rescue false
     end
 
   end
